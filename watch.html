@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="软件介绍视频播放页面">
+  <title>视频播放｜软件视频库</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="watch-body">
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+  <header class="site-header">
+    <a class="brand" href="./">
+      <span class="brand-mark">←</span>
+      <span>返回视频库</span>
+    </a>
+    <a class="github-link" href="https://github.com/LPDLG/software-video-gallery" target="_blank" rel="noreferrer">查看仓库 ↗</a>
+  </header>
+
+  <main class="watch-main">
+    <section id="player-shell" class="player-shell">
+      <div class="player-wrap">
+        <video id="player" controls playsinline preload="metadata"></video>
+      </div>
+      <div class="watch-info">
+        <div class="watch-copy">
+          <p class="eyebrow">SOFTWARE INTRODUCTION</p>
+          <h1 id="video-title">正在加载…</h1>
+          <p id="video-description"></p>
+          <div class="watch-actions">
+            <a id="download-link" class="primary-button" download>下载视频</a>
+            <button id="copy-link" class="secondary-button" type="button">复制播放链接</button>
+          </div>
+        </div>
+        <aside class="qr-panel">
+          <img id="qr-image" alt="当前视频播放页面二维码">
+          <strong>手机扫码播放</strong>
+          <span>二维码指向当前页面</span>
+        </aside>
+      </div>
+    </section>
+    <p id="not-found" class="not-found" hidden>未找到对应视频。<a href="./">返回视频库</a></p>
+  </main>
+
+  <script src="assets/videos.js"></script>
+  <script src="assets/watch.js"></script>
+</body>
+</html>
