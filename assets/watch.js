@@ -7,11 +7,12 @@ if (!video) {
   shell.hidden = true;
   missing.hidden = false;
 } else {
-  document.title = `${video.title}｜软件视频库`;
+  document.title = `${video.title}｜艺术教学视频库`;
   const player = document.querySelector("#player");
   player.src = video.file;
   player.poster = video.poster;
   document.querySelector("#video-title").textContent = video.title;
+  document.querySelector("#video-category").textContent = video.category || "软件介绍";
   document.querySelector("#video-description").textContent = `${video.description} 视频时长 ${video.duration}。`;
   document.querySelector("#qr-image").src = video.qr;
   const download = document.querySelector("#download-link");

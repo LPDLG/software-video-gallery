@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="软件介绍视频在线播放与二维码导航">
-  <title>软件介绍视频库</title>
+  <meta name="description" content="人工智能艺术课程与软件介绍视频在线播放及二维码导航">
+  <title>人工智能艺术教学视频库</title>
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
@@ -13,19 +13,19 @@
   <header class="site-header">
     <a class="brand" href="./" aria-label="返回首页">
       <span class="brand-mark">▶</span>
-      <span>软件视频库</span>
+      <span>艺术教学视频库</span>
     </a>
     <a class="github-link" href="https://github.com/LPDLG/software-video-gallery" target="_blank" rel="noreferrer">GitHub 仓库 ↗</a>
   </header>
 
   <main>
     <section class="hero">
-      <p class="eyebrow">SOFTWARE VIDEO COLLECTION</p>
-      <h1>扫码即看，快速认识<br><span>常用创意软件</span></h1>
-      <p class="hero-copy">每个视频均配有独立播放页面与二维码，支持电脑、手机和平板直接访问。</p>
+      <p class="eyebrow">AI ART LEARNING COLLECTION</p>
+      <h1>扫码即看，学习<br><span>人工智能艺术创作</span></h1>
+      <p class="hero-copy">汇集软件介绍、前9章课程与第19章实验教学视频。每个视频均配有独立播放页面与二维码，支持电脑、手机和平板直接访问。</p>
       <div class="hero-meta">
-        <span id="video-count">12 个视频</span>
-        <span>全部短于 5 分钟</span>
+        <span id="video-count">36 个视频</span>
+        <span>软件介绍与课程教学</span>
         <span>在线播放</span>
       </div>
     </section>
@@ -36,10 +36,21 @@
           <p class="eyebrow">VIDEO LIBRARY</p>
           <h2 id="library-title">选择一个视频</h2>
         </div>
-        <label class="search-box">
-          <span>⌕</span>
-          <input id="search" type="search" placeholder="搜索软件名称" autocomplete="off">
-        </label>
+        <div class="search-controls">
+          <label class="category-box">
+            <span class="sr-only">视频分类</span>
+            <select id="category-filter">
+              <option value="all">全部分类</option>
+              <option value="软件介绍">软件介绍</option>
+              <option value="前9章课程">前9章课程</option>
+              <option value="第19章实验">第19章实验</option>
+            </select>
+          </label>
+          <label class="search-box">
+            <span>⌕</span>
+            <input id="search" type="search" placeholder="搜索视频标题" autocomplete="off">
+          </label>
+        </div>
       </div>
       <div id="video-grid" class="video-grid"></div>
       <p id="empty-state" class="empty-state" hidden>没有找到匹配的视频。</p>
@@ -47,11 +58,12 @@
   </main>
 
   <footer>
-    <span>软件介绍视频库</span>
+    <span>人工智能艺术教学视频库</span>
     <span>由 GitHub Pages 提供访问</span>
   </footer>
 
   <script src="assets/videos.js"></script>
+  <script src="assets/course-videos.js"></script>
   <script src="assets/app.js"></script>
 </body>
 </html>
